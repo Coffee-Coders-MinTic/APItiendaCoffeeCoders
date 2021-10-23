@@ -1,5 +1,4 @@
 import Express from 'express';
-import { MongoClient } from 'mongodb';
 import Cors from 'cors';
 import dotenv from 'dotenv';
 import { conectarBD } from './db/dbMongo.js';
