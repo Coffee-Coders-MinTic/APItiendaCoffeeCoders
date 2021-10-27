@@ -1,5 +1,5 @@
 import Express from 'express';
-import {queryUsuarios, ingresarUsuario, editarUsuarios} from '../controllers/controllerUsuarios.js';
+import {queryUsuarios, ingresarUsuario, editarUsuarios, consultarocrearUsuarioRegistrado} from '../controllers/controllerUsuarios.js';
 
 
 const rutaUsuarios = Express.Router();
@@ -11,6 +11,10 @@ const callbackGeneral = (res) => (err, result) => {
       res.json(result);
     }
   };
+
+rutaUsuarios.route('/usuarios/self').get((req, res) => {
+    consultarocrearUsuarioRegistrado(req, callbackGeneral(res));
+  });
 
 
 rutaUsuarios.route('/usuarios').get((req, res) => {
