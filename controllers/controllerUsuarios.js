@@ -1,6 +1,7 @@
 import { ObjectId } from 'mongodb';
 import { getDB } from '../db/dbMongo.js';
 import pkg from 'jwt-decode';
+
 const {jwt_decode} = pkg;
 
 const queryUsuarios = async (callback) => {
